@@ -101,6 +101,6 @@ Free to use, fork, and modify for personal or academic use.
 ## 👋 Final Note
 
 AuraCast is a showcase of how **real-time databases, AI, and stunning UI/UX** can combine into a powerful environmental dashboard.  
-Built by **@techpyx** with ♥️ to make air quality more visible, local, and actionable.
+Built by **Aryan Pandey** with ♥️ to make air quality more visible, local, and actionable.
 
 ---
