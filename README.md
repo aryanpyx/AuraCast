@@ -3,6 +3,17 @@
 AuraCast is a next-gen air quality monitoring app that provides **hyperlocal AQI data** and **AI-powered 24-hour forecasts** for Lucknow, India. Built with modern UI/UX principles, real-time map interactivity, and LSTM-based predictions, AuraCast offers a complete, mobile-friendly dashboard to analyze, forecast, and understand air pollution zone by zone.
 
 ---
+## 👋 Hello, Contributors!
+
+If you are reading this, welcome! Here’s what you are contributing:
+
+- This project shows **real-time air quality for Lucknow**.
+- Your contributions might include **fixing typos**, **improving instructions**, or **adding features**.
+- Don’t worry if you’re new — small changes like README improvements **count as your first contribution**!
+- Everything you write here will help other users understand AuraCast better.
+
+Thank you for helping improve this project! 💡
+
 
 ## ✨ Key Features
 
