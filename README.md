@@ -18,6 +18,23 @@ If you are reading this, welcome! Here’s what you are contributing:
 
 Thank you for helping improve this project! 💡
 
+---
+
+<details>
+  <summary><strong>📑 Table of Contents</strong></summary>
+
+  - [✨ Key Features](#-key-features)
+  - [🛠️ Tech Stack](#️-tech-stack)
+  - [🚀 How to Use](#-how-to-use)
+  - [🗺️ Sample Zones to Try](#️-sample-zones-to-try)
+  - [🧪 Simulated AI + Live Convex Data](#-simulated-ai--live-convex-data)
+  - [🧭 Known UX Details](#-known-ux-details)
+  - [🧾 License](#-license)
+  - [👋 Final Note](#-final-note)
+
+</details>
+
+---
 
 ## ✨ Key Features
 
@@ -106,6 +123,7 @@ Each zone is seeded with unique data and realistic weather/pollutant conditions.
 - You can **dismiss the welcome message** after selecting a zone.
 
 ---
+
 ## 🧾 License
 
 This project is released under the [MIT License](LICENSE).  
