@@ -95,6 +95,46 @@ Thank you for helping improve this project! 💡
 
 ---
 
+## Quick Start for Contributors 🧹
+
+Get AuraCast running locally in just a few steps!
+
+1. **Clone the Repository**  
+   ```bash
+   git clone https://github.com/aryanpyx/AuraCast.git
+   cd AuraCast
+
+2. **Install Dependencies**
+   Ensure you have Node.js (v16 or higher) installed, then run:
+   ```bash
+   npm install
+
+3. **Set Up Convex**
+   Sign up for a free account at Convex.
+   Create a new project and get your CONVEX_URL from the Convex dashboard.
+   Create a .env file in the project root with:
+   
+   env
+
+   VITE_CONVEX_URL=your_convex_url_here
+
+4. **Run the Development Server**
+   ```bash
+   npm run dev
+
+   Open http://localhost:5173 in your browser to view AuraCast.
+
+
+5. **Start Contributing**
+
+   Explore the codebase, make changes, and test locally.
+   Submit your changes via a pull request (see GitHub’s guide).
+
+
+  **Tip**: Ensure you have a GitHub account to fork and contribute. Check the Convex documentation for setup help. 
+
+---
+
 ## 🗺️ Sample Zones to Try
 
 | Zone                  | AQI Level   | Status      |
