@@ -84,6 +84,53 @@ Thank you for helping improve this project! 💡
 > ⚠️ No traditional backend server (FastAPI/Node) is used — Convex handles real-time DB & logic.
 
 ---
+## Folder Structure
+```
+AuraCast/
+├─ .cursor/
+│  └─ rules/
+│     └─ convex_rules.mdc
+├─ .github/
+│  ├─ ISSUE_TEMPLATE/
+│  │  ├─ bug_report.yml
+│  │  ├─ config.yml
+│  │  └─ feature_request.yml
+│  └─ pull_request_template.md
+├─ .vercel/
+│  └─ project.json
+├─ convex/
+│  ├─ _generated/
+│  │  ├─ api.d.ts
+│  │  ├─ api.js
+│  │  ├─ dataModel.d.ts
+│  │  ├─ server.d.ts
+│  │  └─ server.js
+│  ├─ aqi.ts
+│  ├─ auth.config.ts
+│  ├─ auth.ts
+│  ├─ http.ts
+│  ├─ router.ts
+│  ├─ schema.ts
+│  └─ tsconfig.json
+├─ src/
+│  ├─ components/
+│  │  ├─ AQIMap.tsx
+│  │  ├─ ForecastPanel.tsx
+│  │  ├─ HealthTips.tsx
+│  │  ├─ PollutantBreakdown.tsx
+│  │  └─ ZoneModal.tsx
+│  ├─ lib/
+│  │  └─ utils.ts
+│  ├─ App.tsx
+│  ├─ index.css
+│  ├─ main.tsx
+│  ├─ SignInForm.tsx
+│  ├─ SignOutButton.tsx
+│  └─ vite-env.d.ts
+└─ Additional documentations
+
+```
+---
 
 ## 🚀 How to Use
 
