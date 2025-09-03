@@ -1,12 +1,31 @@
 "use client";
-import { useAuthActions } from "@convex-dev/auth/react";
 import { useState } from "react";
-import { toast } from "sonner";
 
 export function SignInForm() {
-  const { signIn } = useAuthActions();
   const [flow, setFlow] = useState<"signIn" | "signUp">("signIn");
   const [submitting, setSubmitting] = useState(false);
+
+  // Mock sign in for demo
+  const mockSignIn = async (type: string, data?: any) => {
+    setSubmitting(true);
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1000));
+
+    // Store authentication state
+    localStorage.setItem('auracast_authenticated', 'true');
+    localStorage.setItem('auracast_user', JSON.stringify({
+      _id: 'demo-user',
+      name: 'Demo User',
+      email: data?.get ? data.get('email') : 'demo@example.com'
+    }));
+
+    // Dispatch custom event to notify app of authentication change
+    window.dispatchEvent(new CustomEvent('authStateChanged', {
+      detail: { authenticated: true }
+    }));
+
+    setSubmitting(false);
+  };
 
   return (
     <div className="w-full">
@@ -17,19 +36,7 @@ export function SignInForm() {
           setSubmitting(true);
           const formData = new FormData(e.target as HTMLFormElement);
           formData.set("flow", flow);
-          void signIn("password", formData).catch((error) => {
-            let toastTitle = "";
-            if (error.message.includes("Invalid password")) {
-              toastTitle = "Invalid password. Please try again.";
-            } else {
-              toastTitle =
-                flow === "signIn"
-                  ? "Could not sign in, did you mean to sign up?"
-                  : "Could not sign up, did you mean to sign in?";
-            }
-            toast.error(toastTitle);
-            setSubmitting(false);
-          });
+          void mockSignIn("password", formData);
         }}
       >
         <input
@@ -69,7 +76,7 @@ export function SignInForm() {
         <span className="mx-4 text-secondary">or</span>
         <hr className="my-4 grow border-gray-200" />
       </div>
-      <button className="auth-button" onClick={() => void signIn("anonymous")}>
+      <button className="auth-button" onClick={() => void mockSignIn("anonymous")}>
         Sign in anonymously
       </button>
     </div>
