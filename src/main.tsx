@@ -4,10 +4,22 @@ import { ConvexReactClient } from "convex/react";
 import "./index.css";
 import App from "./App";
 
-const convex = new ConvexReactClient(import.meta.env.VITE_CONVEX_URL as string);
+// ✅ Initialize Convex Client with env check
+const convexUrl = import.meta.env.VITE_CONVEX_URL;
+if (!convexUrl) {
+  console.error("❌ Missing VITE_CONVEX_URL in your .env file");
+}
+const convex = new ConvexReactClient(convexUrl as string);
 
-createRoot(document.getElementById("root")!).render(
+const rootElement = document.getElementById("root");
+
+// ✅ Safety check for root element
+if (!rootElement) {
+  throw new Error("Root element not found. Did you forget <div id='root'> in index.html?");
+}
+
+createRoot(rootElement).render(
   <ConvexAuthProvider client={convex}>
     <App />
-  </ConvexAuthProvider>,
+  </ConvexAuthProvider>
 );
